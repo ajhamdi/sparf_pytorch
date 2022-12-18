@@ -1,1 +1,3 @@
-# sparf_pytorch
+# SPARF
+Official code and datasets of the paper "SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images"
+## Coming Soon ...
