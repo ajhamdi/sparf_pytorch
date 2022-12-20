@@ -8,7 +8,7 @@ The official Pytroch code of the paper [SPARF: Large-Scale Learning of 3D Sparse
 If you find our work useful in your research, please consider citing:
 ```bibtex
 @InProceedings{hamdi2022sparf, 
-    author = {Hamdi, Abdullah and Ghanem, Bernard and Nie{\ss}ner, Matthias}}, 
+    author = {Hamdi, Abdullah and Ghanem, Bernard and Nie{\ss}ner, Matthias}, 
     title = {SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images}, 
     publisher = {arxiv}, 
     year = {2022},
