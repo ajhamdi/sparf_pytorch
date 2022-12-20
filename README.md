@@ -1,6 +1,6 @@
 # SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images
 By [Abdullah Hamdi](https://abdullahamdi.com/), [Bernard Ghanem](http://www.bernardghanem.com/), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html) 
-### [Paper](https://arxiv.org/abs/2212.09100) | [Video](https://youtu.be/VcjypZ0hp4w) | Tutorial . <br>
+### [Paper](https://arxiv.org/abs/2212.09100) | [Video](https://youtu.be/VcjypZ0hp4w) | Dataset . <br>
 <p float="left">
 <img src="https://user-images.githubusercontent.com/26301932/208697062-829496a7-4a25-42cf-8a67-41cc64b0ea66.gif" align="left" width="250">
 <img src="https://user-images.githubusercontent.com/26301932/208697090-2bb7ade0-1cce-4ebe-bbd8-c61d4fcfb587.gif" align="center" width="250">
