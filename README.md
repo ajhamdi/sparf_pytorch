@@ -9,12 +9,11 @@ By [Abdullah Hamdi](https://abdullahamdi.com/), [Bernard Ghanem](http://www.bern
  
 The official Pytroch code of the paper [SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images](https://arxiv.org/abs/2212.09100). SPARF is a large-scale sparse radiance field dataset consisting of ~ 1 million SRFs with multiple voxel resolutions (32, 128, and 512) and 17 million posed images with a resolution of 400 X 400. Furthermore, we propose SuRFNet, a pipline to generate SRFs conditioned on input images, achieving SOTA on ShapeNet novel views synthesis from one or few input images. 
 
-<br> <br> <br>
+<br>
 <p float="center">
 <img src="https://user-images.githubusercontent.com/26301932/208700278-62be65c3-87d6-44aa-8939-bdeb30d889f0.gif" align="center" width="600">
 </p>
-
-<br> <br> <br>
+<br>
 ## Code, dataset, and models are coming Soon ...
 <p float="center">
 <img src="https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif" align="center" width="600">
