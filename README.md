@@ -9,8 +9,18 @@ By [Abdullah Hamdi](https://abdullahamdi.com/), [Bernard Ghanem](http://www.bern
  
 The official Pytroch code of the paper [SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images](https://arxiv.org/abs/2212.09100). SPARF is a large-scale sparse radiance field dataset consisting of ~ 1 million SRFs with multiple voxel resolutions (32, 128, and 512) and 17 million posed images with a resolution of 400 X 400. Furthermore, we propose SuRFNet, a pipline to generate SRFs conditioned on input images, achieving SOTA on ShapeNet novel views synthesis from one or few input images. 
 
+# Environment setup
+
+To start, we prefer creating the environment using conda:
+```sh
+conda env create -f environment.yml
+conda activate sparf
+```
+Please make sure you have up-to-date NVIDIA drivers supporting CUDA 11.3 at least.
+
+Alternatively use `pip -r requirements.txt`.
 ## SPARF Posed Multi-View Image Dataset 
-The dataset is released in the [link](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing) in the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. 
+The dataset is released in the [link](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing). Each of SPARF's classes has the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. Download all classes and place inside `data/SPARF_images`. Then you can run the notebook example   
 
 
 ## Code and Data for Sparse Radiance Fields is coming soon ... 
