@@ -20,7 +20,7 @@ Please make sure you have up-to-date NVIDIA drivers supporting CUDA 11.3 at leas
 
 Alternatively use `pip -r requirements.txt`.
 ## SPARF Posed Multi-View Image Dataset 
-The dataset is released in the [link](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing). Each of SPARF's classes has the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. Download all classes and place inside `data/SPARF_images`. Then you can run the notebook example   
+The dataset is released in the [link](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing). Each of SPARF's classes has the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. Download all content in the link and place inside `data/SPARF_images`. Then you can run the [notebook example](https://github.com/ajhamdi/sparf_pytorch/blob/main/examples/mvimage_load.ipynb). 
 
 
 ## Code and Data for Sparse Radiance Fields is coming soon ... 
