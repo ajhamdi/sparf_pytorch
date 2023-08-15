@@ -1,4 +1,4 @@
-# SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images
+# SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images (ICCV 2023)
 By [Abdullah Hamdi](https://abdullahamdi.com/), [Bernard Ghanem](http://www.bernardghanem.com/), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html) 
 ### [Paper](https://arxiv.org/abs/2212.09100) | [Video](https://youtu.be/VcjypZ0hp4w) | [Website](https://abdullahamdi.com/sparf/) | [Dataset](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing) . <br>
 <p float="left">
@@ -34,11 +34,11 @@ The dataset is released in the [link](https://drive.google.com/drive/folders/19z
 ## Citation
 If you find our work useful in your research, please consider citing:
 ```bibtex
-@InProceedings{hamdi2022sparf, 
-    author = {Hamdi, Abdullah and Ghanem, Bernard and Nie{\ss}ner, Matthias}, 
-    title = {SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images}, 
-    publisher = {arxiv}, 
-    year = {2022},
+@article{hamdi2022sparf,
+  title={SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images},
+  author={Hamdi, Abdullah and Ghanem, Bernard and Nie{\ss}ner, Matthias},
+  journal={arXiv preprint arXiv:2212.09100},
+  year={2022}
 }
 ```
 
