@@ -37,8 +37,8 @@ If you find our work useful in your research, please consider citing:
 @article{hamdi2022sparf,
   title={SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images},
   author={Hamdi, Abdullah and Ghanem, Bernard and Nie{\ss}ner, Matthias},
-  journal={arXiv preprint arXiv:2212.09100},
-  year={2022}
+  journal={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
+  year={2023}
 }
 ```
 
