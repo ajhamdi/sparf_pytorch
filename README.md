@@ -34,7 +34,7 @@ The dataset is released in the [link](https://drive.google.com/drive/folders/19z
 ## Citation
 If you find our work useful in your research, please consider citing:
 ```bibtex
-@article{hamdi2022sparf,
+@InProceedings{hamdi2022sparf,
   title={SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images},
   author={Hamdi, Abdullah and Ghanem, Bernard and Nie{\ss}ner, Matthias},
   journal={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
