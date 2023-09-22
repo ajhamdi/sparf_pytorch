@@ -10,10 +10,10 @@ from functools import partial
 
 from torch.nn import functional as F
 # Must be imported before large libs
-try:
-    import open3d as o3d
-except ImportError:
-    raise ImportError("Please install open3d with `pip install open3d`.")
+# try:
+#     import open3d as o3d
+# except ImportError:
+#     raise ImportError("Please install open3d with `pip install open3d`.")
 from extra_utils import EmptyModule
 import torch
 import torch.nn as nn
@@ -29,9 +29,9 @@ M = np.array(
     ]
 )
 
-assert (
-    int(o3d.__version__.split(".")[1]) >= 8
-), f"Requires open3d version >= 0.8, the current version is {o3d.__version__}"
+# assert (
+#     int(o3d.__version__.split(".")[1]) >= 8
+# ), f"Requires open3d version >= 0.8, the current version is {o3d.__version__}"
 
 # if not os.path.exists("ModelNet40"):
 #     logging.info("Downloading the pruned ModelNet40 dataset...")
@@ -41,13 +41,13 @@ assert (
 ###############################################################################
 # Utility functions
 ###############################################################################
-def PointCloud(points, colors=None):
+# def PointCloud(points, colors=None):
 
-    pcd = o3d.geometry.PointCloud()
-    pcd.points = o3d.utility.Vector3dVector(points)
-    if colors is not None:
-        pcd.colors = o3d.utility.Vector3dVector(colors)
-    return pcd
+#     pcd = o3d.geometry.PointCloud()
+#     pcd.points = o3d.utility.Vector3dVector(points)
+#     if colors is not None:
+#         pcd.colors = o3d.utility.Vector3dVector(colors)
+#     return pcd
 
 class MyPruning(nn.Module):
 
