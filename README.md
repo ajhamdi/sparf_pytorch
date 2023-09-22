@@ -22,20 +22,25 @@ The dataset is released in the [link](https://drive.google.com/drive/folders/1Qd
 
 Download all content in the link and place inside `data/SPARF_srf`. Then you can run the [main training code](https://github.com/ajhamdi/sparf_pytorch/blob/main/run_sparf.py).
 
-## script for rendering ShapeNet images used in creating SPARF 
+## Script for rendering ShapeNet images used in creating SPARF 
+make sure that `ShapeNetCore.v2` is downloaded and placed in `data/ShapeNetCore.v2`. Then run the following script to render the images used in creating SPARF. 
+```bash
 ```bash
 python run_sparf.py --run render --data_dir data/SPARF_srf/ --nb_views 400 --object_class car 
 ```
-## script for extracting SPARF Radiance Fields (full SRFs with voxel res=128 and SH dim=4)
+## Script for extracting SPARF Radiance Fields (full SRFs with voxel res=128 and SH dim=4)
+make sure that `SPARF_images` is downloaded and placed in `data/SPARF_images`. Then run the following script to extract the SRFs.
 ```bash
-python run_sparf.py --run extract --vox_res 128 --sh_dim 4 --object_class airplane --data_dir data/SPARF_srf/ --visualize --evaluate 
+python run_sparf.py --run extract --vox_res 128 --sh_dim 4 --object_class airplane --data_dir data/SPARF_images/ --visualize --evaluate 
 ```
 
-## script for extracting SPARF Radiance Fields (partial SRFs with voxel res=512 and SH dim=1, nb_views=3)
+## Script for extracting SPARF Radiance Fields (partial SRFs with voxel res=512 and SH dim=1, nb_views=3)
+make sure that `SPARF_images` is downloaded and placed in `data/SPARF_images`. Then run the following script to extract the SRFs.
 ```bash
-python run_sparf.py --run preprocess --vox_res 512 --sh_dim 1 --rf_variant 0 --object_class airplane --nb_views 3 --data_dir data/SPARF_srf/ --randomized_views
+python run_sparf.py --run preprocess --vox_res 512 --sh_dim 1 --rf_variant 0 --object_class airplane --nb_views 3 --data_dir data/SPARF_images/ --randomized_views
 ```
 ## Training and Inference pipeline on SPARF Radiance Fields
+make sure that `SPARF_srf` is downloaded and placed in `data/SPARF_srf`. Then run the following script to train on SRFs.
 ```bash
 python run_sparf.py --vox_res 128 --nb_views 3 --nb_rf_variants 4 --input_quantization_size 1.0 --strides 2 --lr_decay 0.99 --batch_size 6 --lr 1e-2 --visualize --normalize_input const --lambda_cls 30.0 --lambda_main 2.0 --augment_type none --mask_type densepoints --ignore_loss_mask --nb_frames 200 --validate_training  --data_dir data/SPARF_srf/ --run train --object_class airplane 
 ```
