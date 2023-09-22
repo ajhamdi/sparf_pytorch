@@ -24,9 +24,12 @@ The dataset is released in the [link](https://drive.google.com/drive/folders/19z
 
 
 ## SPARF Radiance Field Dataset
-The dataset is released in the [link](https://drive.google.com/drive/folders/1Qd_hBrRKR1vlCacOSyK_FN4igkHSbPSM?usp=sharing). Each of SPARF's instances has (beside the posed images above) two directories: `STF` (RGB voxels) and `SRF` (Spherical Harmonics voxels). The full radiance fileds are available under `vox_xx/full`, where `xx` is the resolution (32, 128 or 512). The partial SRFs are stored in `vox_xx/full` similarly
+The dataset is released in the [link](https://drive.google.com/drive/folders/1Qd_hBrRKR1vlCacOSyK_FN4igkHSbPSM?usp=sharing). Each of SPARF's instances has (beside the posed images above) two directories: `STF` (RGB voxels) and `SRF` (Spherical Harmonics voxels). The full radiance fileds are available under `<CLASS_LABEL>/<INSTANCE_ID>SRF/vox_<VOXEL-RESOLUTION>/full`, where `<VOXEL-RESOLUTION>` is the resolution (32, 128 or 512). The partial SRFs are stored in `<CLASS_LABEL>/<INSTANCE_ID>SRF/vox_<VOXEL-RESOLUTION>/partial` similarly. The partisioning (shards) and splits of the dataset is available on the file `SNRL_splits.csv` in the root of the dataset. 
 
-Download all content in the link and place inside `data/SPARF_srf`. Then you can run the [main code](#).
+Download all content in the link and place inside `data/SPARF_srf`. Then you can run the [main training code](#).
+
+## Training and Inference on SPARF
+
 
 ## Citation
 If you find our work useful in your research, please consider citing:
