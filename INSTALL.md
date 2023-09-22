@@ -3,9 +3,9 @@
 
 ## Requirements
 
-you need a Cuda `+11.1` installed on your system and (check with command `nvcc --version` ). You also need `gcc --version` to be `>= 8.2.0`. Then follow the following steps:
+you need a Cuda `+11.1` installed on your system (check with command `nvcc --version` ). You also need `gcc --version` to be `>= 8.2.0`. Then follow the following steps:
 
-1. install `Plenxels` and Minkowski Engine (depending on your system from [here](https://nvidia.github.io/MinkowskiEngine/quick_start.html) and [here](https://github.com/sxyu/svox2)
+1. install `Plenxels` and `Minkowski Engine` (depending on your system from [here](https://nvidia.github.io/MinkowskiEngine/quick_start.html) and [here](https://github.com/sxyu/svox2) )
 alternatively you can follow the following steps:where `CONDA_PREFIX` is the path to your conda environment.
 ```bash
 conda create --name sparf0 python=3.6
