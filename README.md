@@ -23,13 +23,10 @@ Alternatively use `pip -r requirements.txt`.
 The dataset is released in the [link](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing). Each of SPARF's classes has the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. Download all content in the link and place inside `data/SPARF_images`. Then you can run the [notebook example](https://github.com/ajhamdi/sparf_pytorch/blob/main/examples/mvimage_load.ipynb). 
 
 
-## Code and Data for Sparse Radiance Fields is coming soon ... 
+## SPARF Radiance Field Dataset
+The dataset is released in the [link](https://drive.google.com/drive/folders/1Qd_hBrRKR1vlCacOSyK_FN4igkHSbPSM?usp=sharing). Each of SPARF's instances has (beside the posed images above) two directories: `STF` (RGB voxels) and `SRF` (Spherical Harmonics voxels). The full radiance fileds are available under `vox_xx/full`, where `xx` is the resolution (32, 128 or 512). The partial SRFs are stored in `vox_xx/full` similarly
 
-<br>
-<p float="center">
-<img src="https://user-images.githubusercontent.com/26301932/208700278-62be65c3-87d6-44aa-8939-bdeb30d889f0.gif" align="center" width="600">
-</p>
-<br>
+Download all content in the link and place inside `data/SPARF_srf`. Then you can run the [main code](#).
 
 ## Citation
 If you find our work useful in your research, please consider citing:
