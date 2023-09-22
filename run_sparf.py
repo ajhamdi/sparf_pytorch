@@ -206,9 +206,9 @@ def run_branched(args):
         pyglet.options["headless"] = True
 
         
-    if setup["run"] == "base":
-        run_base(setup,)
-    elif setup["run"] == "render":
+    # if setup["run"] == "base":
+    #     run_base(setup,)
+    if setup["run"] == "render":
         run_render(setup,)
     elif setup["run"] == "extract":
         run_extract(setup,)
@@ -218,41 +218,41 @@ def run_branched(args):
         run_train(setup,)
     elif setup["run"] == "preprocess":
         run_preprocess(setup)
-    elif setup["run"] in ["pixel","vision"]:
-        run_pixel_nerf(setup)
-def run_pixel_nerf(setup): 
-    # root_dir = os.path.join(setup["data_dir"],"ShapeNetRend")
-    from nerf_ops import evaluate_pixel_nerf
+#     elif setup["run"] in ["pixel","vision"]:
+#         run_pixel_nerf(setup)
+# def run_pixel_nerf(setup): 
+#     # root_dir = os.path.join(setup["data_dir"],"ShapeNetRend")
+#     from nerf_ops import evaluate_pixel_nerf
 
-    root_dir = setup["data_dir"]
+#     root_dir = setup["data_dir"]
 
-    writer = SummaryWriter(log_dir=setup["log_dir"])
+#     writer = SummaryWriter(log_dir=setup["log_dir"])
 
-    print("working and data direcoties: ",root_dir,os.getcwd())
-    srf = SparseRadianceFields(vox_res=setup["vox_res"], sh_dim=setup["sh_dim"], reflect_type=setup["reflect_type"], nb_views=setup["nb_views"], input_sh_dim=setup["input_sh_dim"], nb_rf_variants=setup["nb_rf_variants"], normalize=setup["normalize_input"], input_quantization_size=setup["input_quantization_size"],
-                               encode_cameras=bool(setup["encode_cameras"]),
-                               num_encoding_functions=setup["num_encoding_functions"], 
-                               prune_input=setup["prune_input"], density_threshold=setup["density_threshold"],
-                               encode_imgs=bool(setup["encode_imgs"]),
-                                density_normilzation_factor=setup["density_normilzation_factor"], 
-                                colors_normilzation_factor=setup["colors_normilzation_factor"],
-                               encode_time=bool(setup["encode_time"]),
-                               time_steps=setup["time_steps"],diffusion_type=setup["diffusion_type"],
-                               randomized_views=setup["randomized_views"], online_nb_views=setup["online_nb_views"],
-                               kernel_std=setup["kernel_std"], diffusion_kernel_size=setup["diffusion_kernel_size"], ignore_input=["ignore_input"],
-                               dataset_type=setup["dataset_type"]
-                               )
-    # dataloader = make_data_loader("train", root_dir, setup["batch_size"], shuffle=True, num_workers=setup["num_workers"], repeat=False, object_class=setup["object_class"],augment_data=False, drop_last=True, dset_partition=setup["dset_partition"],srf=srf,use_lower_res=setup["use_lower_res"])
-    val_loader = make_data_loader("test", root_dir, setup["batch_size"], shuffle=False, num_workers=setup["num_workers"], repeat=False,object_class=setup["object_class"], augment_data=False, drop_last=True, dset_partition=setup["dset_partition"], srf=srf, use_lower_res=setup["use_lower_res"])
+#     print("working and data direcoties: ",root_dir,os.getcwd())
+#     srf = SparseRadianceFields(vox_res=setup["vox_res"], sh_dim=setup["sh_dim"], reflect_type=setup["reflect_type"], nb_views=setup["nb_views"], input_sh_dim=setup["input_sh_dim"], nb_rf_variants=setup["nb_rf_variants"], normalize=setup["normalize_input"], input_quantization_size=setup["input_quantization_size"],
+#                                encode_cameras=bool(setup["encode_cameras"]),
+#                                num_encoding_functions=setup["num_encoding_functions"], 
+#                                prune_input=setup["prune_input"], density_threshold=setup["density_threshold"],
+#                                encode_imgs=bool(setup["encode_imgs"]),
+#                                 density_normilzation_factor=setup["density_normilzation_factor"], 
+#                                 colors_normilzation_factor=setup["colors_normilzation_factor"],
+#                                encode_time=bool(setup["encode_time"]),
+#                                time_steps=setup["time_steps"],diffusion_type=setup["diffusion_type"],
+#                                randomized_views=setup["randomized_views"], online_nb_views=setup["online_nb_views"],
+#                                kernel_std=setup["kernel_std"], diffusion_kernel_size=setup["diffusion_kernel_size"], ignore_input=["ignore_input"],
+#                                dataset_type=setup["dataset_type"]
+#                                )
+#     # dataloader = make_data_loader("train", root_dir, setup["batch_size"], shuffle=True, num_workers=setup["num_workers"], repeat=False, object_class=setup["object_class"],augment_data=False, drop_last=True, dset_partition=setup["dset_partition"],srf=srf,use_lower_res=setup["use_lower_res"])
+#     val_loader = make_data_loader("test", root_dir, setup["batch_size"], shuffle=False, num_workers=setup["num_workers"], repeat=False,object_class=setup["object_class"], augment_data=False, drop_last=True, dset_partition=setup["dset_partition"], srf=srf, use_lower_res=setup["use_lower_res"])
 
-    metrics = evaluate_pixel_nerf(val_loader, device,srf, setup)
-    val_metrics = {"val_"+k:v for k,v in metrics.items()}
-    record_metrics(val_metrics,writer,0)
+#     metrics = evaluate_pixel_nerf(val_loader, device,srf, setup)
+#     val_metrics = {"val_"+k:v for k,v in metrics.items()}
+#     record_metrics(val_metrics,writer,0)
 
-    c_Results = {'best_loss':0,'best_ssim':val_metrics["val_ssim"],'best_psnr':val_metrics["val_psnr"],'best_lispip':val_metrics["val_lpips"],'best_acc':0,"best_diou":0,"c_epoch":0,}     
-    print(c_Results)
-    results = ListDict(merge_two_dicts(setup, c_Results))
-    save_results(setup["results_file"],results)
+#     c_Results = {'best_loss':0,'best_ssim':val_metrics["val_ssim"],'best_psnr':val_metrics["val_psnr"],'best_lispip':val_metrics["val_lpips"],'best_acc':0,"best_diou":0,"c_epoch":0,}     
+#     print(c_Results)
+#     results = ListDict(merge_two_dicts(setup, c_Results))
+#     save_results(setup["results_file"],results)
 
 
 
@@ -588,39 +588,6 @@ def run_render(setup):
             c_dict = append_frame_to_camera_dict(scene,c_dict,image_name,scale=scale)
         save_camera_dict(c_dict,h_save_name)
  
-def run_base(setup): 
-    dset = ShapeNetCore(setup["data_dir"], ("train",), 100000, load_textures=False,dset_norm=False,)
-    classes = dset.classes
-    results = ListDict(["label","shp_id","shp_indx","nb_points","dist","depth"])
-    print("classes nb:", len(classes), "number of models: ", len(dset), classes)
-    for ii,shp_nbr in enumerate([12,19,18,29,33,75,36,154,57,62,170,66]): # [12,19,18,29,33]
-        shapes_dir = os.path.join(setup["output_dir"],str(ii))
-        rendering_dir = os.path.join(shapes_dir,"renderings")
-        Path(rendering_dir).mkdir(parents=True, exist_ok=True)
-        lbl, mesh, GT_POINTS = dset[shp_nbr]
-        # mesh.show()
-        for img_nbr, nb_points in enumerate([500000]): #  
-            print("V:",mesh.vertices.shape[0],"F:",mesh.faces.shape[0])
-            points = mesh.sample(nb_points)
-            density_threshold=density_threshold_from_nbpoints(nb_points)
-            depth = 10
-            vertices, faces =  reconstruct_mesh_from_points(points,depth=depth,normals_correction=100,density_threshold=density_threshold,target_faces=20000)
-            r_mesh = trimesh.Trimesh(vertices=vertices,faces=faces) 
-            # r_mesh.show()
-            dist =  np.mean(trimesh.proximity.closest_point(r_mesh, GT_POINTS)[1]) + np.mean(trimesh.proximity.closest_point(mesh,r_mesh.sample(100000) )[1])          
-            print("\n\n##### Label:",classes[lbl],"V:",vertices.shape[0],"F:",faces.shape[0],"dis:", dist)
-            scene = trimesh.scene.Scene(r_mesh.apply_scale(1.0))
-            save_scene_frame(scene ,rendering_dir,img_nbr)
-            r_mesh.export(os.path.join(shapes_dir,str(nb_points)+".obj"))
-            c_resuls = {"label":classes[lbl],"shp_id":shp_nbr,"shp_indx":ii,"nb_points":nb_points,"dist":100*dist,"depth":depth}
-            results.append(c_resuls)
-            save_results(os.path.join(setup["output_dir"],"results.csv"),results)
-        gif_folder(rendering_dir,"png",duration=0.5)
-
-
-def save_scene_frame(scene ,rendering_dir,img_nbr,resolution=(400,400),distance=1.3,angles=(-0.6,-1.9,0)):
-    image_name = os.path.join(rendering_dir,str(img_nbr).zfill(3)+".png")
-    save_trimesh_scene(scene,image_name,resolution=resolution,distance=distance,angles=angles,center=(0,0,0),show=False)
 
 
 if __name__ == '__main__':
