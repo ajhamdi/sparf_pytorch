@@ -11,7 +11,8 @@ The official Pytroch code of the paper [SPARF: Large-Scale Learning of 3D Sparse
 
 # Environment setup
 
-follow instructions in [INTALL.md](https://github.com/ajhamdi/sparf_pytorch/blob/main/INTALL.md) to setup the conda environment.
+follow instructions in [INTALL.md](https://github.com/ajhamdi/sparf_pytorch/blob/main/INSTALL.md) to setup the conda environment.
+
 ## SPARF Posed Multi-View Image Dataset 
 The dataset is released in the [link](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing). Each of SPARF's classes has the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. Download all content in the link and place inside `data/SPARF_images`. Then you can run the [notebook example](https://github.com/ajhamdi/sparf_pytorch/blob/main/examples/mvimage_load.ipynb). 
 
