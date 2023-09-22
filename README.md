@@ -11,14 +11,7 @@ The official Pytroch code of the paper [SPARF: Large-Scale Learning of 3D Sparse
 
 # Environment setup
 
-To start, we prefer creating the environment using conda:
-```sh
-conda env create -f environment.yml
-conda activate sparf
-```
-Please make sure you have up-to-date NVIDIA drivers supporting CUDA 11.3 at least.
-
-Alternatively use `pip -r requirements.txt`.
+follow instructions in [INTALL.md](https://github.com/ajhamdi/sparf_pytorch/blob/main/INTALL.md) to setup the conda environment.
 ## SPARF Posed Multi-View Image Dataset 
 The dataset is released in the [link](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing). Each of SPARF's classes has the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. Download all content in the link and place inside `data/SPARF_images`. Then you can run the [notebook example](https://github.com/ajhamdi/sparf_pytorch/blob/main/examples/mvimage_load.ipynb). 
 
@@ -26,7 +19,7 @@ The dataset is released in the [link](https://drive.google.com/drive/folders/19z
 ## SPARF Radiance Field Dataset
 The dataset is released in the [link](https://drive.google.com/drive/folders/1Qd_hBrRKR1vlCacOSyK_FN4igkHSbPSM?usp=sharing). Each of SPARF's instances has (beside the posed images above) two directories: `STF` (RGB voxels) and `SRF` (Spherical Harmonics voxels). The full radiance fileds are available under `<CLASS_LABEL>/<INSTANCE_ID>SRF/vox_<VOXEL-RESOLUTION>/full`, where `<VOXEL-RESOLUTION>` is the resolution (32, 128 or 512). The partial SRFs are stored in `<CLASS_LABEL>/<INSTANCE_ID>SRF/vox_<VOXEL-RESOLUTION>/partial` similarly. The partitioning (shards) and splits of the dataset is available on the file `SNRL_splits.csv` in the root of the dataset. 
 
-Download all content in the link and place inside `data/SPARF_srf`. Then you can run the [main training code](#/run_sparf).
+Download all content in the link and place inside `data/SPARF_srf`. Then you can run the [main training code](https://github.com/ajhamdi/sparf_pytorch/blob/main/run_sparf.py).
 
 ## Training and Inference on SPARF
 
