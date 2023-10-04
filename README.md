@@ -1,6 +1,6 @@
 # SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images (ICCV 2023)
 By [Abdullah Hamdi](https://abdullahamdi.com/), [Bernard Ghanem](http://www.bernardghanem.com/), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html) 
-### [Paper](https://arxiv.org/abs/2212.09100) | [Video](https://youtu.be/VcjypZ0hp4w) | [Website](https://abdullahamdi.com/sparf/) | [Dataset](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing) . <br>
+### [Paper](https://openaccess.thecvf.com/content/ICCV2023W/AI3DCC/html/Hamdi_SPARF_Large-Scale_Learning_of_3D_Sparse_Radiance_Fields_from_Few_ICCVW_2023_paper.html) | [Video](https://youtu.be/VcjypZ0hp4w) | [Website](https://abdullahamdi.com/sparf/) | [Dataset](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing) . <br>
 <p float="left">
 <img src="https://user-images.githubusercontent.com/26301932/208697062-829496a7-4a25-42cf-8a67-41cc64b0ea66.gif" align="left" width="250">
 <img src="https://user-images.githubusercontent.com/26301932/208697090-2bb7ade0-1cce-4ebe-bbd8-c61d4fcfb587.gif" align="center" width="250">
@@ -47,11 +47,13 @@ python run_sparf.py --vox_res 128 --nb_views 3 --nb_rf_variants 4 --input_quanti
 ## Citation
 If you find our work useful in your research, please consider citing:
 ```bibtex
-@InProceedings{hamdi2022sparf,
-  title={SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images},
-  author={Hamdi, Abdullah and Ghanem, Bernard and Nie{\ss}ner, Matthias},
-  journal={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
-  year={2023}
+@InProceedings{Hamdi_2023_ICCV,
+    author    = {Hamdi, Abdullah and Ghanem, Bernard and Nie{\ss}sner, Matthias},
+    title     = {SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
+    month     = {October},
+    year      = {2023},
+    pages     = {2930-2940}
 }
 ```
 
