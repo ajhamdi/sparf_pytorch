@@ -1,6 +1,6 @@
 # SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input Images (ICCV 2023)
 By [Abdullah Hamdi](https://abdullahamdi.com/), [Bernard Ghanem](http://www.bernardghanem.com/), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html) 
-### [Paper](https://openaccess.thecvf.com/content/ICCV2023W/AI3DCC/html/Hamdi_SPARF_Large-Scale_Learning_of_3D_Sparse_Radiance_Fields_from_Few_ICCVW_2023_paper.html) | [Video](https://youtu.be/VcjypZ0hp4w) | [Website](https://abdullahamdi.com/sparf/) | [Dataset](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing) . <br>
+### [Paper](https://openaccess.thecvf.com/content/ICCV2023W/AI3DCC/html/Hamdi_SPARF_Large-Scale_Learning_of_3D_Sparse_Radiance_Fields_from_Few_ICCVW_2023_paper.html) | [Video](https://youtu.be/VcjypZ0hp4w) | [Website](https://abdullahamdi.com/sparf/) | [Dataset (code: sparf)](https://exrcsdrive.kaust.edu.sa/index.php/s/AzPfy0k45X01ql3) . <br>
 <p float="left">
 <img src="https://user-images.githubusercontent.com/26301932/208697062-829496a7-4a25-42cf-8a67-41cc64b0ea66.gif" align="left" width="250">
 <img src="https://user-images.githubusercontent.com/26301932/208697090-2bb7ade0-1cce-4ebe-bbd8-c61d4fcfb587.gif" align="center" width="250">
@@ -14,7 +14,7 @@ The official Pytroch code of the paper [SPARF: Large-Scale Learning of 3D Sparse
 follow instructions in [INTALL.md](https://github.com/ajhamdi/sparf_pytorch/blob/main/INSTALL.md) to setup the conda environment.
 
 ## SPARF Posed Multi-View Image Dataset 
-The dataset is released in the [link](https://drive.google.com/drive/folders/19zCvjQJEh30vCzNC32Bvkc8s_s7GjbKR?usp=sharing). Each of SPARF's classes has the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. Download all content in the link and place inside `data/SPARF_images`. Then you can run the [notebook example](https://github.com/ajhamdi/sparf_pytorch/blob/main/examples/mvimage_load.ipynb). 
+The dataset is released in the [link (code: sparf)](https://exrcsdrive.kaust.edu.sa/index.php/s/AzPfy0k45X01ql3). Each of SPARF's classes has the same structure of [NeRF-synthetic](https://github.com/sxyu/pixel-nerf) dataset and can be loaded similarly. Download all content in the link and place inside `data/SPARF_images`. Then you can run the [notebook example](https://github.com/ajhamdi/sparf_pytorch/blob/main/examples/mvimage_load.ipynb). 
 
 
 ## SPARF Radiance Field Dataset
